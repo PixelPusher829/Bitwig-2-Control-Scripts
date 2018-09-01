@@ -336,12 +336,12 @@ function onMidi(status, data1, data2) {
 
         if ((status === 0x93) && (data1 === 0x33) && !overdubMode) //Overdub mode pressed
         {
-            transportView.setLauncherOverdub(false); //bitwig bug, should be true
+            transportView.setLauncherOverdub(true); //fixed
             return;
         }
         if ((status === 0x93) && (data1 === 0x33) && overdubMode) //Overdub mode pressed
         {
-            transportView.setLauncherOverdub(true); //bitwig bug, should be false
+            transportView.setLauncherOverdub(false); //fixed
             return;
         }
 
